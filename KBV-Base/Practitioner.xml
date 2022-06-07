@@ -1,0 +1,88 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="12345678901234567890" />
+  <meta>
+    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Practitioner|1.1.2" />
+  </meta>
+  <!-- ANR -->
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <code value="LANR" />
+      </coding>
+    </type>
+    <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR" />
+    <value value="838382202" />
+  </identifier>
+  <!--  EFN  -->
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <code value="DN" />
+      </coding>
+    </type>
+    <system value="http://fhir.de/NamingSystem/bundesaerztekammer/efn" />
+    <value value="123456789123456" />
+  </identifier>
+  <!--  ZANR  -->
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+        <code value="ZANR" />
+      </coding>
+    </type>
+    <system value="http://fhir.de/NamingSystem/kzbv/zahnarztnummer" />
+    <value value="123456789" />
+  </identifier>
+  <name>
+    <use value="official" />
+    <text value="Hans Topp-Glücklich" />
+    <family value="Topp-Glücklich">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Topp-Glücklich" />
+      </extension>
+    </family>
+    <given value="Hans" />
+    <prefix value="Dr. med.">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="AC" />
+      </extension>
+    </prefix>
+  </name>
+  <telecom>
+    <system value="phone" />
+    <value value="06151/1111111" />
+  </telecom>
+  <address>
+    <type value="both" />
+    <line value="Musterstr. 1">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+        <valueString value="1" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+        <valueString value="Musterstr." />
+      </extension>
+    </line>
+    <city value="Darmstadt" />
+    <postalCode value="64283" />
+    <country value="D" />
+  </address>
+  <qualification>
+    <code>
+      <coding>
+        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_WBO" />
+        <version value="http://snomed.info/sct/900000000000207008/version/20200731" />
+        <code value="096" />
+        <display value="TG Kindernephrologie">
+          <extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German">
+            <extension url="content">
+              <valueString value="TG Kindernephrologie" />
+            </extension>
+          </extension>
+        </display>
+      </coding>
+    </code>
+  </qualification>
+</Practitioner>

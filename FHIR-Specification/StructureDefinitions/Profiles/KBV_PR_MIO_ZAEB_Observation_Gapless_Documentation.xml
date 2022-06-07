@@ -1,0 +1,257 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_ZAEB_Observation_Gapless_Documentation" />
+	<version value="1.1.0" />
+	<name value="KBV_PR_MIO_ZAEB_Observation_Gapless_Documentation" />
+	<title value="KBV_PR_MIO_ZAEB_Observation_Gapless_Documentation" />
+	<status value="active" />
+	<publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+	<fhirVersion value="4.0.1" />
+	<mapping>
+		<identity value="workflow" />
+		<uri value="http://hl7.org/fhir/workflow" />
+		<name value="Workflow Pattern" />
+	</mapping>
+	<mapping>
+		<identity value="v2" />
+		<uri value="http://hl7.org/v2" />
+		<name value="HL7 v2 Mapping" />
+	</mapping>
+	<mapping>
+		<identity value="rim" />
+		<uri value="http://hl7.org/v3" />
+		<name value="RIM Mapping" />
+	</mapping>
+	<mapping>
+		<identity value="w5" />
+		<uri value="http://hl7.org/fhir/fivews" />
+		<name value="FiveWs Pattern Mapping" />
+	</mapping>
+	<kind value="resource" />
+	<abstract value="false" />
+	<type value="Observation" />
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+	<derivation value="constraint" />
+	<differential>
+		<element id="Observation">
+			<path value="Observation" />
+			<short value="Lückenlose Dokumentation" />
+			<definition value="In diesem Profil kann angegeben werden, seit wann die lückenlose Dokumentation im papierbasierten Zahnbonusheft nachweislich vorliegt." />
+		</element>
+		<element id="Observation.meta">
+			<path value="Observation.meta" />
+			<min value="1" />
+		</element>
+		<element id="Observation.meta.versionId">
+			<path value="Observation.meta.versionId" />
+			<max value="0" />
+		</element>
+		<element id="Observation.meta.lastUpdated">
+			<path value="Observation.meta.lastUpdated" />
+			<max value="0" />
+		</element>
+		<element id="Observation.meta.source">
+			<path value="Observation.meta.source" />
+			<max value="0" />
+		</element>
+		<element id="Observation.meta.profile">
+			<path value="Observation.meta.profile" />
+			<min value="1" />
+			<max value="1" />
+			<fixedCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_ZAEB_Observation_Gapless_Documentation|1.1.0" />
+		</element>
+		<element id="Observation.meta.security">
+			<path value="Observation.meta.security" />
+			<max value="0" />
+		</element>
+		<element id="Observation.meta.tag">
+			<path value="Observation.meta.tag" />
+			<max value="0" />
+		</element>
+		<element id="Observation.implicitRules">
+			<path value="Observation.implicitRules" />
+			<max value="0" />
+		</element>
+		<element id="Observation.language">
+			<path value="Observation.language" />
+			<max value="0" />
+		</element>
+		<element id="Observation.text">
+			<path value="Observation.text" />
+			<definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+		</element>
+		<element id="Observation.contained">
+			<path value="Observation.contained" />
+			<max value="0" />
+		</element>
+		<element id="Observation.extension">
+			<path value="Observation.extension" />
+			<slicing>
+				<discriminator>
+					<type value="value" />
+					<path value="url" />
+				</discriminator>
+				<rules value="open" />
+			</slicing>
+		</element>
+		<element id="Observation.extension:Disclaimer">
+			<path value="Observation.extension" />
+			<sliceName value="Disclaimer" />
+			<min value="1" />
+			<max value="1" />
+			<type>
+				<code value="Extension" />
+				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_ZAEB_Disclaimer|1.1.0" />
+			</type>
+			<mustSupport value="true" />
+		</element>
+		<element id="Observation.extension:Disclaimer.value[x]">
+			<path value="Observation.extension.value[x]" />
+			<min value="1" />
+			<mustSupport value="true" />
+		</element>
+		<element id="Observation.identifier">
+			<path value="Observation.identifier" />
+			<max value="0" />
+		</element>
+		<element id="Observation.basedOn">
+			<path value="Observation.basedOn" />
+			<max value="0" />
+		</element>
+		<element id="Observation.partOf">
+			<path value="Observation.partOf" />
+			<max value="0" />
+		</element>
+		<element id="Observation.category">
+			<path value="Observation.category" />
+			<max value="0" />
+		</element>
+		<element id="Observation.code">
+			<path value="Observation.code" />
+			<mustSupport value="true" />
+		</element>
+		<element id="Observation.code.coding">
+			<path value="Observation.code.coding" />
+			<max value="0" />
+		</element>
+		<element id="Observation.code.text">
+			<path value="Observation.code.text" />
+			<min value="1" />
+			<fixedString value="Datum, seit dem eine lückenlose Dokumentation in dem Papier-Zahnbonusheft nachweislich vorliegt." />
+			<mustSupport value="true" />
+		</element>
+		<element id="Observation.subject">
+			<path value="Observation.subject" />
+			<min value="1" />
+			<type>
+				<code value="Reference" />
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_ZAEB_Patient|1.1.0" />
+			</type>
+			<mustSupport value="true" />
+		</element>
+		<element id="Observation.subject.reference">
+			<path value="Observation.subject.reference" />
+			<min value="1" />
+			<mustSupport value="true" />
+		</element>
+		<element id="Observation.subject.type">
+			<path value="Observation.subject.type" />
+			<max value="0" />
+		</element>
+		<element id="Observation.subject.identifier">
+			<path value="Observation.subject.identifier" />
+			<max value="0" />
+		</element>
+		<element id="Observation.subject.display">
+			<path value="Observation.subject.display" />
+			<max value="0" />
+		</element>
+		<element id="Observation.focus">
+			<path value="Observation.focus" />
+			<max value="0" />
+		</element>
+		<element id="Observation.encounter">
+			<path value="Observation.encounter" />
+			<max value="0" />
+		</element>
+		<element id="Observation.effective[x]">
+			<path value="Observation.effective[x]" />
+			<max value="0" />
+		</element>
+		<element id="Observation.issued">
+			<path value="Observation.issued" />
+			<max value="0" />
+		</element>
+		<element id="Observation.performer">
+			<path value="Observation.performer" />
+			<max value="0" />
+		</element>
+		<element id="Observation.value[x]">
+			<path value="Observation.value[x]" />
+			<slicing>
+				<discriminator>
+					<type value="type" />
+					<path value="$this" />
+				</discriminator>
+				<rules value="closed" />
+			</slicing>
+			<min value="1" />
+			<type>
+				<code value="dateTime" />
+			</type>
+			<mustSupport value="true" />
+		</element>
+		<element id="Observation.value[x]:valueDateTime">
+			<path value="Observation.value[x]" />
+			<sliceName value="valueDateTime" />
+			<min value="1" />
+			<type>
+				<code value="dateTime" />
+			</type>
+			<mustSupport value="true" />
+		</element>
+		<element id="Observation.dataAbsentReason">
+			<path value="Observation.dataAbsentReason" />
+			<max value="0" />
+		</element>
+		<element id="Observation.interpretation">
+			<path value="Observation.interpretation" />
+			<max value="0" />
+		</element>
+		<element id="Observation.note">
+			<path value="Observation.note" />
+			<max value="0" />
+		</element>
+		<element id="Observation.bodySite">
+			<path value="Observation.bodySite" />
+			<max value="0" />
+		</element>
+		<element id="Observation.method">
+			<path value="Observation.method" />
+			<max value="0" />
+		</element>
+		<element id="Observation.specimen">
+			<path value="Observation.specimen" />
+			<max value="0" />
+		</element>
+		<element id="Observation.device">
+			<path value="Observation.device" />
+			<max value="0" />
+		</element>
+		<element id="Observation.referenceRange">
+			<path value="Observation.referenceRange" />
+			<max value="0" />
+		</element>
+		<element id="Observation.hasMember">
+			<path value="Observation.hasMember" />
+			<max value="0" />
+		</element>
+		<element id="Observation.derivedFrom">
+			<path value="Observation.derivedFrom" />
+			<max value="0" />
+		</element>
+		<element id="Observation.component">
+			<path value="Observation.component" />
+			<max value="0" />
+		</element>
+	</differential>
+</StructureDefinition>

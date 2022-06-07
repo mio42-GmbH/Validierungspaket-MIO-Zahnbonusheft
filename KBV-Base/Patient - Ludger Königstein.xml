@@ -1,0 +1,60 @@
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="9774f67f-a238-4daf-b4e6-679deeef3811" />
+  <meta>
+    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Patient|1.1.3" />
+  </meta>
+  <!-- pid -->
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <code value="MR" />
+      </coding>
+    </type>
+    <system value="http://www.acme.com/identifiers/patient" />
+    <value value="123456" />
+  </identifier>
+  <!-- versichertenID GKV -->
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+        <code value="GKV" />
+      </coding>
+    </type>
+    <system value="http://fhir.de/NamingSystem/gkv/kvid-10" />
+    <value value="K234567890" />
+  </identifier>
+  <!-- Reisepassnummer -->
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <code value="PPN" />
+      </coding>
+    </type>
+    <system value="http://www.acme.com/identifiers/patient" />
+    <value value="C01X0006H" />
+  </identifier>
+  <name>
+    <use value="official" />
+    <text value="Ludger Königsstein" />
+    <family value="Königsstein">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Königsstein" />
+      </extension>
+    </family>
+    <given value="Ludger" />
+  </name>
+  <!-- Telefonnummer -->
+  <telecom>
+    <system value="phone" />
+    <value value="0134 5678910" />
+  </telecom>
+  <telecom>
+    <system value="email" />
+    <value value="ludger@koenigsstein.org" />
+  </telecom>
+  <gender value="male" />
+  <birthDate value="1935-06-22" />
+</Patient>
