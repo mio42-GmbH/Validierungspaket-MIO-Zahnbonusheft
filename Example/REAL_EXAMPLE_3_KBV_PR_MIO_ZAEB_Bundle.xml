@@ -1,0 +1,184 @@
+<Bundle xmlns="http://hl7.org/fhir">
+	<id value="85d596a6-e429-4b47-aaeb-a3ccf7586de2" />
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_ZAEB_Bundle|1.1.0" />
+	</meta>
+	<identifier>
+		<system value="urn:ietf:rfc:3986" />
+		<value value="urn:uuid:85d596a6-e429-4b47-aaeb-a3ccf7586de2" />
+	</identifier>
+	<type value="document" />
+	<timestamp value="2017-07-02T12:30:02Z" />
+	<entry>
+		<fullUrl value ="urn:uuid:5c17dc61-72d9-4270-a96d-b9ae5856a72d"/>
+		<resource>
+			<Composition>
+				<id value="5c17dc61-72d9-4270-a96d-b9ae5856a72d" />
+					<meta>
+						<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_ZAEB_Composition|1.1.0" />
+					</meta>
+					<status value="final" />
+					<type>
+						<coding>
+							<system value="http://snomed.info/sct" />
+							<version value="http://snomed.info/sct/900000000000207008/version/20210131" />
+							<code value="371525003" />
+							<display value="Clinical procedure report (record artifact)" />
+						</coding>
+					</type>
+					<subject>
+						<reference value="urn:uuid:3df1fe18-96c6-4730-961c-aca96dce2dc1" />
+					</subject>
+					<date value="2017-07-02T12:30:02Z" />
+					<author>
+						<reference value="urn:uuid:120a6605-c4f7-430e-8644-7a939b22cedf" />
+					</author>
+					<title value="Bonushefteintrag" />
+					<section>
+						<entry>
+							<reference value="urn:uuid:9af37122-fe16-41df-8208-68d84ce45b7a" />
+						</entry>
+					</section>
+			</Composition>			
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:9af37122-fe16-41df-8208-68d84ce45b7a"/>
+		<resource>
+			<Observation>
+				<id value="9af37122-fe16-41df-8208-68d84ce45b7a" />
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_ZAEB_Observation_Dental_Check_Up|1.1.0" />
+				</meta>
+				<text>
+					<status value="generated" />
+					<div xmlns="http://www.w3.org/1999/xhtml">
+						<p>zahnärztliche Untersuchung Kind</p>
+					</div>
+				</text>
+				<status value="final" />
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct" />
+						<version value="http://snomed.info/sct/900000000000207008/version/20210131" />
+						<code value="2115003" />
+						<display value="Dental prophylaxis, children (procedure)">
+							<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German">
+								<extension url="content">
+									<valueString value="Individualprophylaxe (Kind)" />
+								</extension>
+							</extension>
+						</display>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:3df1fe18-96c6-4730-961c-aca96dce2dc1" />
+				</subject>
+				<effectiveDateTime value="2017-07-02" />
+				<valueBoolean value="true" />
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:120a6605-c4f7-430e-8644-7a939b22cedf"/>
+		<resource>
+			<Organization>
+				<id value="120a6605-c4f7-430e-8644-7a939b22cedf" />
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_ZAEB_Organization|1.1.0" />
+				</meta>
+				<text>
+					<status value="generated" />
+					<div xmlns="http://www.w3.org/1999/xhtml">
+						<p>Organisation - Dr. med. Hans Topp-Glücklich</p>
+					</div>
+				</text>
+				<identifier>
+					<type>
+						<coding>
+							<system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+							<code value="KZVA" />
+						</coding>
+					</type>
+					<system value="http://fhir.de/NamingSystem/kzbv/kzvabrechnungsnummer" />
+					<value value="123456789" />
+				</identifier>
+				<name value="Dr. med. Hans Topp-Glücklich" />
+				<address>
+					<type value="both" />
+					<text value="Musterstr. 1, 64283 Darmstadt, Deutschland" />
+					<line value="Musterweg 1">
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+							<valueString value="Musterstr" />
+						</extension>
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+							<valueString value="1" />
+						</extension>
+					</line>
+					<city value="Darmstadt" />
+					<postalCode value="64283" />
+					<country value="D" />
+				</address>
+			</Organization>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value ="urn:uuid:3df1fe18-96c6-4730-961c-aca96dce2dc1"/>
+		<resource>
+			<Patient>
+				<id value="3df1fe18-96c6-4730-961c-aca96dce2dc1" />
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_ZAEB_Patient|1.1.0" />
+				</meta>
+				<text>
+					<status value="generated" />
+					<div xmlns="http://www.w3.org/1999/xhtml">
+						<p>Patient:Pia Paul</p>
+					</div>
+				</text>
+				<identifier>
+					<type>
+						<coding>
+							<system value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+							<code value="GKV" />
+						</coding>
+					</type>
+					<system value="http://fhir.de/NamingSystem/gkv/kvid-10" />
+					<value value="L234567890" />
+				</identifier>
+				<name>
+					<use value="official" />
+					<family value="Pia Paul">
+						<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+							<valueString value="Paul" />
+						</extension>
+					</family>
+					<given value="Pia" />
+				</name>
+				<birthDate value="2000-05-24" />
+				<address>
+					<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+						<valueString value="Mitte" />
+					</extension>
+					<type value="both" />
+					<line value="Musterweg 42 Hinterhof">
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+							<valueString value="Musterweg" />
+						</extension>
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+							<valueString value="42" />
+						</extension>
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+							<valueString value="Hinterhof" />
+						</extension>
+					</line>
+					<line value="Mitte" />
+					<city value="Berlin" />
+					<postalCode value="10787" />
+					<country value="D" />
+				</address>
+			</Patient>
+		</resource>
+	</entry>
+</Bundle>
+		
